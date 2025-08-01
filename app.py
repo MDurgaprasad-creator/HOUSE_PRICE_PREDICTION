@@ -6,7 +6,7 @@ import joblib
 st.set_page_config(page_title="🏠 House Price Predictor", layout="centered")
 
 # Load the trained model
-model = joblib.load("models/house_price_model.pkl")
+model = joblib.load("house_price_model.pkl")
 # Title
 st.title("🏡 House Price Prediction App")
 st.write("Fill in the details below to estimate the house price.")
@@ -42,4 +42,5 @@ if submitted:
         st.success(f"🏠 Estimated House Price: **${prediction:,.2f}**")
     except Exception as e:
         st.error(f"❌ Prediction failed: {e}")
+
 
